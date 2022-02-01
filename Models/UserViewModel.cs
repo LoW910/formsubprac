@@ -4,20 +4,17 @@ namespace FormSubmission.Models
 {
     public class User
     {
-        public User() {
-
-        }
 
         [Required]
         [MinLength(4)]
-        public string FirstName {get; set;} = string.Empty;
+        public string FirstName {get;set;} = string.Empty;
 
         [Required]
         [MinLength(4)]
         public string LastName {get;set;} = string.Empty;
 
         [Required]
-        [RegularExpression(@"0-9")]
+        [RegularExpression(@"^[+]?\d+?$", ErrorMessage ="Only whole positive numbers allowed.")]
         public int Age {get;set;}
 
         [Required]

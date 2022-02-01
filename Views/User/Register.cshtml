@@ -1,11 +1,11 @@
 @model FormSubmission.Models.User
 
-<form asp-action="Register" asp-controller="User" class="form-group" method="post">
+<form asp-action="Create" asp-controller="User" class="form-group" method="post">
 
     <div class="form-group">
         <span asp-validation-for="FirstName"></span>
         <label asp-for="FirstName" class="form-control"></label>
-        <input asp-form="FirstName" class="form-control">
+        <input asp-for="FirstName" class="form-control">
     </div>
     <div class="form-group">
         <span asp-validation-for="LastName"></span>
