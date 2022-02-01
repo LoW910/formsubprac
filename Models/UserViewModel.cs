@@ -1,3 +1,4 @@
+using System;
 using System.ComponentModel.DataAnnotations;
 
 namespace FormSubmission.Models
@@ -26,6 +27,12 @@ namespace FormSubmission.Models
         [MinLength(8)]
         [DataType(DataType.Password)]
         public string Password {get;set;}
+
+        [Required]
+        [DataType(DataType.Date)]
+        [Display(Name = "Todays Date")]
+        [FutureDate]
+        public DateTime When {get;set;}
 
 
     }
